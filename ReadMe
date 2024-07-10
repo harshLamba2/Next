@@ -1,1 +1,11 @@
-1. install next using npx create-next-app@latest // to 
+1. install next using npx create-next-app@latest // for getting the repositoris in the same file use . (npx create-next-app@latest .) or name the directory (npx create-next-app@latest next)
+2. install packages required i.e mongoose react-icons
+
+3. all the initial styling is in src/app/page.tsx and styling of that page is in src/app/global.css
+4. create a component directory for react components inside of src/ and alongside app/
+
+5. to create a page you'll create a directory in your src/app/ directory i.e if my page url is /addProduct ill create a directory in app/ with the name addProduct/
+6. add a page.jsx file inside of that to be used as your page when loaded there
+
+6. to access an item in the params i.e there is an edit page which takes previous topic's id to edit the data
+    we will create an editTopic directory  we will create it inside of src/app/ and to access the params value we will ceate another directory inside of it to access the id of previous topic like src/app/editTopic/[id]/page.jsx  and this page.jsx should include all the code which would have been there in editTopic
