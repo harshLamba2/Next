@@ -9,3 +9,28 @@
 
 6. to access an item in the params i.e there is an edit page which takes previous topic's id to edit the data
     we will create an editTopic directory  we will create it inside of src/app/ and to access the params value we will ceate another directory inside of it to access the id of previous topic like src/app/editTopic/[id]/page.jsx  and this page.jsx should include all the code which would have been there in editTopic
+
+
+    <!-- BACKEND -->
+1. create .end file outside
+2. create a directory libs
+3. create mongoDb connection in the string
+4. create a models directory(to map mongoDB collections) 
+5. define schemas inside of models
+
+6. create a file route.js inside of a concerning field i.e addTopic this directory has to be inside of api/ which should be inside of app/
+/app/api/addTopic/route.js
+
+[await request.json(); is only usable once for second time it is rendered useless and throws error]
+
+<!-- whenever connectin with mongoose.models.Topics || mongoose.model("Topics", topicSchema); make sure it is models and model -->
+
+
+IMPORTANT 
+By default, Next.js uses Server Components, where the JSX gets compiled to "pure HTML" and saved in the server
+soo to use a jsx page as client side architecture declare "use client" on the top of the page;
+
+check out import useSWR from 'swr'; for backend requests 
+
+to disable default strict mode of react go to next.config.js and add reactStrictMode: false
+
