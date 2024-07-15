@@ -20,7 +20,6 @@ export async function POST(request) {
     }
 }
 
-
 export async function GET(request) {
     try {
     await connectMongoDb();
@@ -32,8 +31,6 @@ export async function GET(request) {
     return NextResponse.json({ message: 'Failed to insert user' }, { status: 500 });
     }
 }
-
-
 
 export async function DELETE(request) {
     try {
