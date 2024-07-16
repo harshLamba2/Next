@@ -23,10 +23,6 @@ export async function POST(request) {
 export async function GET(request) {
     try {
 
-        console.log(process.env.CONNECTION_STRING);
-
-        return NextResponse.json({ message: process.env.CONNECTION_STRING, data:{allTopics:[]}}, { status: 200 });
-
     await connectMongoDb();
     let allTopics=await Topics.find({});
     return NextResponse.json({ message: 'Data obtained Successfully', data:{allTopics}}, { status: 200 });
