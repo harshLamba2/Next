@@ -14,6 +14,8 @@ const [render, setRender]=useState(1);
 const [topics, setTopics]=useState([]);
 
 useEffect(()=>{
+
+  console.log(process.env.BASE_URI)
   axios.get('/api/topics')
   .then(res=>{
     setTopics(res.data.data.allTopics)
