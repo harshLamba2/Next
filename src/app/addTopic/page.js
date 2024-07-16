@@ -22,7 +22,7 @@ export default function AddTopic(){
                 let newTopic={title, discription}
                 axios.post('/api/topics', newTopic)
                 .then(res=>{
-                    replace('/')
+                    replace('/');
                 }).catch(err=>{
                     toast.error('Network Error')
                     console.log(err);
